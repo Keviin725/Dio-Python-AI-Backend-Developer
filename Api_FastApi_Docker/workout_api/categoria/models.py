@@ -6,6 +6,6 @@ from sqlalchemy import Integer, String
 class CategoriaModal(BaseModel):
     __tablename__ = 'Categorias'
     pk_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    nome: Mapped[str] = mapped_column(String(50), nullable=False)
+    nome: Mapped[str] = mapped_column(String(50), unique=True, nullable=False)
     atleta: Mapped['AtletaModal'] = relationship(back_populates='categoria')
     
