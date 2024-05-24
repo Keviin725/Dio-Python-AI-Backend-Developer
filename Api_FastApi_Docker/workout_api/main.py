@@ -12,3 +12,6 @@ if __name__ == "__main__":
 
 #Comando para rodar o server
 #uvicorn workout_api.main:app --reload
+
+#Comando para ativar ambiente virtual
+# .\Scripts\activate.bat
